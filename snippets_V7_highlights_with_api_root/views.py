@@ -21,8 +21,8 @@ from rest_framework import renderers
 @api_view(('GET',))
 def api_root(request, format=None):
     return Response({
-        'users': reverse('snippets:user-list', request=request, format=format),
-        'snippets': reverse('snippets:snippet-list', request=request, format=format)
+        'users': reverse('user-list', request=request, format=format),
+        'snippets': reverse('snippet-list', request=request, format=format)
     })
 
 class SnippetList(generics.ListCreateAPIView):
